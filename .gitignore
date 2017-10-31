@@ -1,0 +1,12 @@
+.settings
+.project
+target
+log
+.classpath
+.idea
+*.iml
+/sysadmin/node_modules
+/sysadmin/dist
+.metadata/
+*.log
+*.log.*
