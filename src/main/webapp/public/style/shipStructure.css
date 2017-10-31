@@ -1,0 +1,98 @@
+/****************************************配置-start-************************************/
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+.clear {
+    clear: both;
+}
+/****************************************配置-end-************************************/
+
+/****************************************内容-start-************************************/
+#ship{
+    width: 1344px;
+    height: 756px;
+    margin: 0 auto;
+    position: relative;
+}
+#ship_img.big,#ship_img.medium,#ship_img.small{
+    margin:  300px auto;
+    position: relative;
+    z-index: 0;
+}
+#ship_img.big{
+    width: 1003px;
+    height: 88px;
+    background: url(../images/shipStructure_copy/船头标志.png) -0px -0px no-repeat;
+}
+#ship_img.medium{
+
+}
+#ship_img.small{
+
+}
+#ship_Cockpit_img{
+    width: 53px;
+    height: 77px;
+    background: url(../images/shipStructure_copy/船形.png) -0px -0px no-repeat;
+    position: absolute;
+    z-index: 1;
+}
+#ship_content_left.big_left,#ship_content_left.medium_left,#ship_content_left.small_left,#ship_content_right.big_right,#ship_content_right.medium_right,#ship_content_right.small_right{
+    position: absolute;
+    z-index: 1;
+}
+#ship_content_left.big_left,#ship_content_left.medium_left,#ship_content_left.small_left,#ship_content_right.big_right,#ship_content_right.medium_right,#ship_content_right.small_right{
+    top: 10px;
+}
+#ship_content_left.big_left{
+    left: 100px;
+}
+#ship_content_left.medium_left{
+    left: 80px;
+}
+#ship_content_left.small_left{
+     left: 60px;
+}
+#ship_content_right.big_right{
+    right: 100px;
+}
+#ship_content_right.medium_right{
+    right: 80px;
+}
+#ship_content_right.small_right{
+    right: 60px;
+}
+#ship_content_left_top,#ship_content_left_bottom,#ship_content_right_top,#ship_content_right_bottom{
+    position: relative;
+}
+.bit_content_left,.bit_content_right{
+    float: left;
+    /*border: 1px solid red;*/
+}
+#ship_content_left_bitnum,#ship_content_right_bitnum,#ship_content_left_Cabinnum,#ship_content_right_Cabinnum{
+    position: absolute;
+}
+#ship_content_left_top,#ship_content_right_top{
+    /*-moz-transform: scaleX(-1);*/
+    /*-webkit-transform: scaleX(1);*/
+    /*-o-transform: scaleX(-1);*/
+    transform: scaleY(-1);
+    -webkit-transform: scaleY(-1);
+    /*filter: fliph; !*IE*! */
+}
+.bit_num_left,.bit_num_right,.Cabin_num_left,.Cabin_num_right{
+    float: left;
+    font: 14px "黑体";
+    text-align: center;
+}
+#ship .bg{
+    height: 3px;
+    margin-right: 0.5px;
+    margin-left: 0.5px;
+    margin-bottom: 1px;
+    background: #394148;
+}
+/****************************************内容-end-************************************/

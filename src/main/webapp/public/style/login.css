@@ -1,0 +1,93 @@
+a,b,big,body,dd,del,div,dl,dt,em,font,form,h1,h2,h3,h4,h5,h6,html,i,iframe,img,ins,label,li,ol,p,pre,small,span,strong,u,ul{margin:0;padding:0}
+
+body{ width:1920px;
+      height:1080px;
+      font-family:"方正黑体简体";
+      background:url(../images/bg.jpg) no-repeat
+	  }
+
+
+/*登录区域*/
+.login{
+	margin:0 auto; width:600px; height:390px; border:1px solid;
+	background:url(../images/login_box.png) no-repeat;
+}
+.input::-ms-clear { display: none; }  
+.input{ 
+width:508px;
+height:65px;
+font-size:20px;
+font-family:"方正黑体简体";
+color:#646464;
+background:rgba(249, 253,255,0);
+border:none;
+border-radius:5px;
+}
+.input_img{
+position:absolute;
+width:22px;
+height:25px;
+float:right;
+top:15px;
+right:11.5px;
+}
+.input_div{
+    position:relative;
+    width:508px;
+	height:65px;
+	background:rgba(249, 253,255,0.8);
+	border-radius:5px;
+	top:55px;
+	left:46px;
+}
+
+.input_pwd{
+    position:relative;
+    width:508px;
+	height:65px;
+	background:rgba(249, 253,255,0.8);
+	border-radius:5px;
+	top:110px;
+	left:46px;
+}
+.rember_pwd{
+	position:relative;
+	width:90px;
+	height:25px;
+	left: 80px;
+	top: 150px;
+	font-size:20px;
+    font-family:"方正黑体简体";
+    color:#d2dde8;
+	text-align:center;
+}
+.forget_pwd{
+	position:relative;
+	width:125px;
+	height:25px;
+	left: 210px;
+	top: 125px;
+	font-size:20px;
+    font-family:"方正黑体简体";
+    color:#d2dde8;
+	text-align:center;
+	cursor:pointer;
+}
+.button_login{
+    position:relative;
+	width:134px;
+	height:55px;
+	left: 418px;
+	top: 85px;
+	border-radius:5px;
+	background:url(../images/button.png) no-repeat;
+	cursor:pointer;
+}
+.r_pwd{
+    position:relative;
+    width:20px;
+	height:20px;
+	left: 45px;
+	top: 175px;
+	cursor:pointer;
+}

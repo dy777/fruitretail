@@ -1,0 +1,450 @@
+body {
+    height: 1080px;
+    width: 1920px;
+    background: #2f3237;
+    position: relative;
+    z-index: 0;
+}
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+.clear {
+    clear: both;
+}
+/**********************各个文件的配置********************/
+/****************头部的样式-start********************/
+header {
+    overflow: hidden;
+}
+header .left {
+    float: left;
+    overflow: hidden;
+    margin: 10px 0 6px 0;
+}
+header .left img {
+    position: relative;
+    z-index: 100;
+    width: auto;
+    height: 64px;
+    float: left;
+    left: 16px;
+}
+header .left .box {
+    margin-left: 37px;
+    background: #2f3237;
+    background: -webkit-gradient(linear, 0 0, 100% 0, color-stop(0, #501e1e), color-stop(100%, #2f3237));
+    background: -moz-linear-gradient(left, #501e1e 0%, #2f3237 100%);
+    padding-left: 58px;
+    position: relative;
+    width: 600px;
+    height: 60px;
+    overflow: hidden;
+    top: 3px;
+    left: -9px;
+}
+header .left ul {
+    position: absolute;
+    top: 0px;
+}
+header .left ul li {
+    background: url("../images/alarm2.png") no-repeat left center;
+    cursor: pointer;
+    color: #FF9A50;
+    height: 30px;
+    line-height: 30px;
+    overflow: hidden;
+    padding-left: 30px;
+    font-size: 16px;
+    width: 470px;
+}
+header .left ul li i {
+    float: left;
+}
+header .left ul li span {
+    float: left;
+    height: 28px;
+    line-height: 28px;
+    max-width: 400px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+header .left ul li.spec {
+    background: url("../images/alarm3.png") no-repeat left center;
+    color: #A4B3B3;
+}
+header .right {
+    background: #53565b;
+    float: right;
+    overflow: hidden;
+    padding: 8px 10px 8px 20px;
+    margin-top: 6px;
+    margin-right: 6px;
+    cursor: pointer;
+}
+header .right span {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+header .right .setting {
+    background: url("../images/set.png") no-repeat center;
+    float: left;
+}
+header .right .user {
+    background: url("../images/user.png") no-repeat center;
+    float: left;
+}
+header .right .mail {
+    background: url("../images/mail.png") no-repeat center;
+    float: left;
+    position: relative;
+}
+header .right .mail i {
+    background: red;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 10px;
+    height: 18px;
+    position: absolute;
+    text-align: center;
+    width: 18px;
+    line-height: 18px;
+    right: -10px;
+    top: -2px;
+}
+/***********************************************************************头部的样式-end********************************************************************/
+/****************************************************************中间内容层的样式-content-start***************************************************************************/
+main {
+    width: 1902px;
+    height: 908px;
+    margin: 0 auto;
+    background: rgba(30, 31, 34, 0.9);
+}
+#main_nav {
+    width: 1902px;
+    height: 34px;
+    background: #21262a;
+    border-bottom: 1px solid #394a57;
+}
+#content_left{
+    width: 1090px;
+    height: 835px;
+    margin:16px 30px 22px 14px;
+    float: left;
+}
+#content_right{
+    width: 752px;
+    height: 835px;
+    margin-top: 16px;
+    margin-right: 16px;
+    margin-bottom: 22px;
+    float: right;
+}
+#content_left_up,#content_right_up{
+    margin: 0 auto;
+    height: 404px;
+}
+#content_left_down,#content_right_down{
+    height: 354px;
+    margin: 27px auto 0 auto;
+}
+#content_left_up,#content_left_down{
+    width: 1088px;
+}
+#content_right_up,#content_right_down{
+    width: 750px;
+}
+#content_left_up{
+    overflow-y :auto;
+}
+#main_content .border{
+    border: 1px solid #66a2cc;
+}
+
+/**********
+船倍位-start
+***********/
+#ship_top{
+    overflow: hidden;
+}
+#ship_top .ship_top_box,#ship_top .ship_top_num, #ship_bottom .ship_bottom_box, #ship_bottom .ship_bottom_num,#ship_total .ship_total_box,#ship_total .ship_total_num{
+    float: left;
+}
+#ship_total .ship_total_num{
+    position: relative;
+}
+#ship_top .ship_top_box,#ship_bottom .ship_bottom_box,#ship_total .ship_total_box{
+    width:97px;
+    height: 90px;
+    border: 1px solid #4e5b64;
+    margin: 17px 0 0 15px;
+}
+#ship_total .ship_total_box{
+    margin-bottom: 17px;
+}
+#ship_top .ship_top_box .p_font,#ship_bottom .ship_bottom_box .p_font{
+    width: 82px;
+    height: 100%;
+    float: left;
+    border-right:1px solid #4e5b64;
+    text-align: center;
+    font: 14px "黑体";
+    line-height: 90px;
+    color: #929292;
+}
+#ship_top .ship_top_box .p_img,#ship_bottom .ship_bottom_box .p_img{
+    float: right;
+}
+#ship_top .ship_top_box .p_img b, #ship_bottom .ship_bottom_box .p_img b{
+    width: 11px;
+    height: 31px;
+    display: block;
+    padding-top: 14px;
+    padding-left: 3px;
+}
+#ship_top .ship_top_box .p_img .b1,#ship_bottom .ship_bottom_box .p_img .b1{
+    background: #2d4251;
+    border-bottom: 1px solid #4e5b64;
+}
+#ship_top .ship_top_box .p_img b s, #ship_bottom .ship_bottom_box .p_img b s{
+    height: 12px;
+    width: 9px;
+    background: url(../images/shipCtrl_images/sprite_content.png) -168px -29px no-repeat;
+    display: block;
+}
+#ship_top .ship_top_box .p_img .b2 s, #ship_bottom .ship_bottom_box .p_img .b2 s{
+    background-position: -142px -51px;
+}
+#ship{
+    width: 100%;
+    height: 186px;
+    margin-top: 10px;
+    position: relative;
+}
+#ship_top .ship_top_num,#ship_bottom .ship_bottom_num,#ship_total .ship_total_num{
+    width: 733px;
+    height: 87px;
+    margin-top: 19px;
+    margin-left: 17px;
+}
+#big_Unload,#small_Unload,#big_Dress,#small_Dress,#big_Unload_bottom,#small_Unload_bottom,#big_Dress_bottom,#small_Dress_bottom,#big_Unload_total,#small_Unload_total,#big_Dress_total,#small_Dress_total{
+    width: 100%;
+    height: 21px;
+    display: -webkit-box;
+}
+#sum,#over{
+    width: 48px;
+    height: 41px;
+    border-left: 1px solid #4e5b64;
+    border-top: 1px solid #4e5b64;
+    border-right: 1px solid #4e5b64;;
+    position: absolute;
+    top: 0;
+    left:755px;
+    background: #373a3d;
+    font: 14px "黑体";
+    color: #929292;
+    text-align: center;
+    line-height: 41px;
+}
+#over{
+    border-bottom: 1px solid #4e5b64;
+    top: 42px;
+    background: #272b2e;
+}
+#big_Unload_box,#big_Dress_box,#big_Unload_bottom_box,#big_Dress_bottom_box,#big_Unload_total_box,#big_Dress_total_box,#small_Unload_box,#small_Dress_box,#small_Unload_total_box,#small_Unload_bottom_box,#small_Dress_bottom_box{
+    font: 10px "黑体";
+    -webkit-box-flex: 1;
+    border-left: 1px solid #252a2f;
+    border-bottom: 1px solid #252a2f;
+    background: #2e495b;
+    color: #8cbbdc;
+    text-align: center;
+    line-height: 21px;
+}
+#small_Unload_box,#small_Unload_bottom_box{
+    border-bottom: none;
+}
+#big_Dress_box,#big_Dress_bottom_box,#big_Dress_total_box,#small_Dress_box,#small_Dress_bottom_box,#small_Unload_total_box{
+    background: #2a2f32;
+    color: #929292;
+    border-right: 1px solid #3b3f42;
+    border-bottom: 1px solid #3b3f42;
+    border-top: 1px solid #3b3f42;
+    border-left: none;
+}
+#small_Dress_box,#small_Dress_bottom_box,#small_Unload_total_box{
+    border-top: none;
+}
+#big_Unload_total_box{
+    background: #373b3e;
+    color:#929292;
+}
+#ship .ship_aboard,#ship .ship_under_box,#ship .ship_under_color{
+    width: 735px;
+}
+#ship .ship_aboard{
+    height: 86px;
+    margin-left: 131px;
+    margin-top: 10px;
+    position: relative;
+    z-index: 3;
+}
+#ship .ship_under_box,#ship .ship_under_color{
+    margin-left: 123px;
+    margin-top: 80px;
+    height:52px ;
+    display: -webkit-box;
+}
+#ship .ship_under_box{
+    cursor: pointer;
+}
+#ship .ship_under_color{
+    margin-top: 4px;
+    height: 21px;
+}
+#ship .ship_aboard .ship_aboard_bit,#ship .ship_aboard .ship_aboard_num,#ship .ship_aboard .ship_aboard_merge{
+    width: 100%;
+    display: -webkit-box;
+}
+#ship .ship_aboard .ship_aboard_bit{
+    height: 54px;
+    background: #121415;
+    cursor: pointer;
+}
+#ship .ship_aboard .ship_aboard_num{
+    margin-top: 6px;
+    height: 14px;
+    margin-bottom: 4px;
+}
+#ship .ship_aboard .ship_aboard_merge{
+    height: 15px;
+}
+#ship #ondeck_merge,#ship #ondeck_num{
+    -webkit-box-flex: 1;
+    color: #bbbcbc;
+    font: 15px "黑体";
+    text-align: center;
+    border: 1px solid transparent;
+}
+#ship #ondeck_num{
+    font-size: 14px;
+}
+#ship #ondeck_box,#ship #belowdeck_box{
+    -webkit-box-flex: 1;
+    display: -webkit-box;
+    -webkit-box-orient:vertical;
+}
+#ship #ondeck_box .ship_aboard_bit_content,#ship #belowdeck_box .belowdeck_box_content{
+    -webkit-box-flex: 1;
+    width: 90%;
+    margin: 1px auto;
+    background: #2f3b44;
+}
+#belowdeck_box_color{
+    -webkit-box-flex: 1;
+    width: 96%;
+    font: 14px/21px "黑体";
+    color: #fff;
+}
+#ship .ship_under{
+    height: 158px;
+    width: 1003px;
+    background: url(../images/shipCtrl_images/sprite_ship.png) -0px -0px no-repeat;
+    margin-left: 8px;
+    position: absolute;
+    top: 17px;
+    z-index: 2;
+}
+#ship .ship_Staff{
+    height: 8px;
+    width: 1024px;
+    background: url(../images/shipCtrl_images/sprite_ship.png) -0px -158px no-repeat;
+    margin-left: 11px;
+    position: absolute;
+    top: 185px;
+}
+#ship .ship_Staff_start,#ship .ship_Staff_end,#ship .ship_Staff_Draft{
+    font: 14px "黑体";
+    color: #a1b1bd;
+    position: absolute;
+    left: 7px;
+    top: -7px;
+}
+#ship .ship_Staff_end{
+    left: 995px;
+}
+#ship .ship_Staff_Draft{
+    top:-40px;
+}
+#ship_total .ship_total_box p{
+    font: 14px "黑体";
+    width: 100%;
+    height: 44.5px;
+    text-align: center;
+    line-height: 44.5px;
+    color: #929292;
+}
+#ship_total .ship_total_box p.color{
+    background: #373a3d;
+    border-bottom: 1px solid #4e5b64;
+}
+/*********
+船倍位-end
+************/
+/****************************************************************中间内容层的样式-content-end***************************************************************************/
+/****************底部的样式-start********************/
+.main_bottom {
+    /* height: 88px; */
+    position: fixed;
+    bottom: -88px;
+    width: 100%;
+}
+.main_bottom::before {
+    background: rgba(31, 32, 35, 0);
+    content: "";
+    display: block;
+    height: 30px;
+    width: 100%;
+}
+.main_bottom ul {
+    background: #2f3237;
+    height: 88px;
+    overflow: hidden;
+}
+.main_bottom li {
+    cursor: pointer;
+    float: left;
+    height: 76px;
+    width: 154px;
+    margin: 5px 0 0 12px;
+}
+.main_bottom li.zl {
+    background: url("../images/overview.png") no-repeat center;
+}
+.main_bottom li.bw {
+    background: url("../images/cb.png") no-repeat center;
+}
+.main_bottom li.dc {
+    background: url("../images/dc.png") no-repeat center;
+}
+.main_bottom li.agv {
+    background: url("../images/AGV.png") no-repeat center;
+}
+.main_bottom li.zl:hover {
+    background: url("../images/overview2.png") no-repeat center;
+}
+.main_bottom li.bw:hover {
+    background: url("../images/cb_btn_blue.png") no-repeat center;
+}
+.main_bottom li.dc:hover {
+    background: url("../images/dc_btn_blue.png") no-repeat center;
+}
+.main_bottom li.agv:hover {
+    background: url("../images/AGV_blue.png") no-repeat center;
+}
+/****************底部的样式-end********************/

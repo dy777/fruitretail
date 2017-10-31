@@ -1,0 +1,322 @@
+body {
+  height: 1080px;
+  width: 1920px;
+  background: #2f3237;
+  position: relative;
+  z-index: 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+.clear{
+  clear: both;
+}
+/**********************各个文件的配置********************/
+/****************头部的样式-start********************/
+header {
+  overflow: hidden;
+}
+
+header .left {
+  float: left;
+  overflow: hidden;
+  margin: 10px 0 6px 0;
+}
+
+header .left img {
+  position: relative;
+  z-index: 100;
+  width: auto;
+  height: 64px;
+  float: left;
+  left: 16px;
+}
+
+header .left .box {
+  margin-left: 37px;
+  background: rgb(47, 50, 55);
+  background: -webkit-gradient(linear, 0 0, 100% 0, color-stop(0, rgb(80, 30, 30)),
+  color-stop(100%, rgb(47, 50, 55)));
+  background: -moz-linear-gradient(left, rgb(80, 30, 30) 0%, rgb(47, 50, 55) 100%);
+  padding-left: 58px;
+  position: relative;
+  width: 600px;
+  height: 60px;
+  overflow: hidden;
+  top:3px;
+  left: -9px;
+}
+
+header .left ul {
+  position: absolute;
+  top: 0px;
+}
+
+header .left ul li {
+  background: url("../images/alarm2.png") no-repeat left center;
+  cursor: pointer;
+  color: #FF9A50;
+  height: 30px;
+  line-height: 30px;
+  overflow: hidden;
+  padding-left: 30px;
+  font-size: 16px;
+  width: 470px;
+}
+
+header .left ul li i {
+  float: left;
+}
+
+header .left ul li span {
+  float: left;
+  height: 28px;
+  line-height: 28px;
+  max-width: 400px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+header .left ul li.spec {
+  background: url("../images/alarm3.png") no-repeat left center;
+  color: #A4B3B3;
+}
+
+header .right {
+  background: rgba(83, 86, 91, 1);
+  float: right;
+  overflow: hidden;
+  padding: 8px 10px 8px 20px;
+  margin-top: 6px;
+  margin-right: 6px;
+  cursor: pointer;
+}
+
+header .right span {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+header .right .setting {
+  background: url("../images/set.png") no-repeat center;
+  float: left;
+}
+
+header .right .user {
+  background: url("../images/user.png") no-repeat center;
+  float: left;
+}
+
+header .right .mail {
+  background: url("../images/mail.png") no-repeat center;
+  float: left;
+  position: relative;
+}
+
+header .right .mail i {
+  background: red;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 10px;
+  height: 18px;
+  position: absolute;
+  text-align: center;
+  width: 18px;
+  line-height: 18px;
+  right: -10px;
+  top: -2px;
+}
+
+/***********************************************************************头部的样式-end********************************************************************/
+
+/****************************************************************中间内容层的样式-content-start***************************************************************************/
+//定义变量
+//主体的长宽
+@main-width:1902px;
+@main-height:908px;
+@main_nav-height:34px;
+//各级标题
+//特殊标识
+@Special:24px;
+//一级标题
+@A-title:22px;
+//二级标题
+@T-title:18px;
+//tab标签字、弹框标题
+@A-content:14px;
+//列表内容文字、报警内容、弹框内容
+@T-content:12px;
+//标尺
+@Auxiliary:10px;
+
+
+//一级标题内容层的背景
+@A-T-content-filling:rgba(30,31,34,0.9);
+//一级标题内容层的文字
+@A-T-content-font:#b6babd;
+//一级标题背景
+@A-T-background-filling:#21262a;
+//一级标题边框
+@A-T-border:#394a57;
+//一级标题选中-填充
+@A-T-select-filling:#244459;
+//一级标题选中-文字
+@A-T-select-font:#fff;
+//一级标题正常-填充
+@A-T-normal-filling:#25343e;
+//一级标题正常-文字
+@A-T-normal-font:#acc5d8;
+//一级标题悬停-填充
+@A-T-Hover-filling:#283a46;
+//一级标题悬停-文字
+@A-T-Hover-font:#acc5d8;
+//二级标题内容层的背景
+@T-T-content-filling:rgba(50,58,64,0.4);
+//二级标题内容层的文字
+@T-T-content-font:#acc5d8;
+//二级标题的边框
+@T-T-border:1px solid #66a2cc;
+//二级标题选中-填充
+@T-T-select-filling:#3e6f90;
+//二级标题选中-文字
+@T-T-select-font:#fff;
+//二级标题正常-填充
+@T-T-normal-filling:#24292e;
+//二级标题正常-文字
+@T-T-normal-font:#acc5d8;
+//二级标题悬停-填充
+@T-T-Hover-filling:#2d383f;
+//二级标题悬停-文字
+@T-T-Hover-font:#acc5d8;
+//弹框内容层背景
+@Bomb-box-filling:#2f373d;
+//弹框内容层边框、弹框标题栏边框
+@Bomb-box-border:1px solid #5a85a2;
+//弹框内容层文字
+@Bomb-box-font:#acc5d8;
+//弹框标题栏背景
+@Bomb-T-box-filling:#205074;
+//弹框标题栏文字
+@Bomb-T-box-font:#fff;
+//右键弹框选中-背景
+@Bomb-right-select-filling:#205074;
+//右键弹框选中-文字
+@Bomb-right-select-font:#fff;
+//右键弹框悬停-背景
+@Bomb-right-Hover-filling:#30424f;
+//右键弹框悬停-文字
+@Bomb-right-Hover-font:#acc5d8;
+
+//各级颜色预定
+//报警
+@alarm:#a62621;
+//预警
+@Warning:#ec7616;
+//内容列表填充
+@content-background:rgba(133,133,133,0.2);
+//内容文字
+@content-color:#b6babd;
+//未来作业-集装箱
+@Future-jobs:#2e495b;
+//作业中-集装箱
+@Operations;#0d7fcf;
+//已作业-集装箱
+@have-jobs:#576265;
+//选中-机械设备
+@Select:#0d7fcf;
+//正常运行-机械设备
+@operation:#87b4d2;
+//闲置-机械设备
+@Idle:#576265;
+//故障-机械设备
+@malfunction:#a62621;
+//维修-机械设备
+@service:#ec7616;
+//分割线
+@Dividing-line:#73818d;
+
+  //主体部分的样式
+main{
+  width: @main-width;
+  height: @main-height;
+  margin: 0 auto;
+  background: rgba(30,31,34,0.9);
+}
+//主体头部的样式
+#main_nav{
+  width: @main-width;
+  height: @main_nav-height;
+  background: #21262a;
+  border-bottom:#394a57;
+}
+
+/****************************************************************中间内容层的样式-content-end***************************************************************************/
+
+/****************底部的样式-start********************/
+.main_bottom { /* height: 88px; */
+  position: fixed;
+  bottom: -88px;
+  width: 100%;
+}
+
+.main_bottom::before {
+  background: rgba(31, 32, 35, 0);
+  content: "";
+  display: block;
+  height: 30px;
+  width: 100%;
+}
+
+.main_bottom ul {
+  background: #2f3237;
+  height: 88px;
+  overflow: hidden;
+}
+
+.main_bottom li {
+  cursor: pointer;
+  float: left;
+  height: 76px;
+  width: 154px;
+  margin: 5px 0 0 12px;
+}
+
+.main_bottom li.zl {
+  background: url("../images/overview.png") no-repeat center;
+}
+
+.main_bottom li.bw {
+  background: url("../images/cb.png") no-repeat center;
+}
+
+.main_bottom li.dc {
+  background: url("../images/dc.png") no-repeat center;
+}
+
+.main_bottom li.agv {
+  background: url("../images/AGV.png") no-repeat center;
+}
+
+.main_bottom li.zl:hover {
+  background: url("../images/overview2.png") no-repeat center;
+}
+
+.main_bottom li.bw:hover {
+  background: url("../images/cb_btn_blue.png") no-repeat center;
+}
+
+.main_bottom li.dc:hover {
+  background: url("../images/dc_btn_blue.png") no-repeat center;
+}
+
+.main_bottom li.agv:hover {
+  background: url("../images/AGV_blue.png") no-repeat center;
+}
+
+/****************底部的样式-end********************/
