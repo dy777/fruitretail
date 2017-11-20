@@ -3,6 +3,7 @@
 target
 log
 .classpath
+*.class
 .idea
 *.iml
 /sysadmin/node_modules
