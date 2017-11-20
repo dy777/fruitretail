@@ -1,7 +1,5 @@
 .settings
 .project
-target
-log
 .classpath
 *.class
 .idea
@@ -11,3 +9,5 @@ log
 .metadata/
 *.log
 *.log.*
+/log
+/target
