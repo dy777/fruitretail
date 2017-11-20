@@ -1,0 +1,540 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+  PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+  "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+	<classPathEntry
+		location=".\mysql-connector-java-5.1.26-bin.jar" />
+		
+
+	<context id="mysql" targetRuntime="MyBatis3">
+		<property name="javaFileEncoding" value="UTF-8" />
+		<commentGenerator
+			type="org.mybatis.generator.internal.DefaultCommentGenerator">
+			<property name="addRemarkComments" value="true" />
+			<property name="suppressAllComments" value="true" />
+		</commentGenerator>
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
+			connectionURL="jdbc:mysql://116.62.27.0:3306/logisticsdb" userId="root"
+			password="Alog@2017">
+		</jdbcConnection>
+
+		<javaTypeResolver>
+			<property name="forceBigDecimals" value="false" />
+		</javaTypeResolver>
+
+		<javaModelGenerator targetPackage="com.alog.biz.model"
+			targetProject="..\..\logistics-facade\src\main\java">
+			<property name="enableSubPackages" value="true" />
+			<property name="trimStrings" value="true" />
+		</javaModelGenerator>
+
+		<sqlMapGenerator targetPackage="mapper" targetProject="..\src\main\resources">
+			<property name="enableSubPackages" value="true" />
+		</sqlMapGenerator>
+
+		<!-- 生成dao，暂时不使用 <javaClientGenerator type="XMLMAPPER" targetPackage="mapper" 
+			targetProject=".\src\main\resources"> <property name="enableSubPackages" 
+			value="true" /> </javaClientGenerator> -->
+		
+		<table tableName="t_store_business_opportunity" domainObjectName="StoreBusinessOpportunity"
+			enableCountByExample="true" enableUpdateByExample="false"
+			enableDeleteByExample="false" selectByExampleQueryId="false"></table>
+
+		<table tableName="t_store_busiopp_log" domainObjectName="StoreBusiOppLog"
+			   enableCountByExample="true" enableUpdateByExample="false"
+			   enableDeleteByExample="false" selectByExampleQueryId="false"></table>
+
+		<table tableName="t_store_busiopp_his" domainObjectName="StoreBusiOppHis"
+			   enableCountByExample="true" enableUpdateByExample="false"
+			   enableDeleteByExample="false" selectByExampleQueryId="false"></table>
+
+		<table tableName="t_store_batch_task" domainObjectName="StoreBatchTask"
+			   enableCountByExample="true" enableUpdateByExample="false"
+			   enableDeleteByExample="false" selectByExampleQueryId="false"></table>
+
+		<table tableName="t_store_batch_task_log" domainObjectName="StoreBatchTaskLog"
+			   enableCountByExample="true" enableUpdateByExample="false"
+			   enableDeleteByExample="false" selectByExampleQueryId="false"></table>
+
+		<!--
+
+		<table tableName="sec_resource" domainObjectName="SecResource"
+			enableCountByExample="true" enableUpdateByExample="false"
+			enableDeleteByExample="false" selectByExampleQueryId="false"></table>
+		
+		<table tableName="t_store_his" domainObjectName="StoreHis"
+			enableCountByExample="true" enableUpdateByExample="false"
+			enableDeleteByExample="false" selectByExampleQueryId="false"></table>
+			
+		<table tableName="t_store_franchise_apply" domainObjectName="StoreFranchiseApply"
+			enableCountByExample="true" enableUpdateByExample="false"
+			enableDeleteByExample="false" selectByExampleQueryId="false"></table>
+			
+		<table tableName="t_store" domainObjectName="Store"
+			enableCountByExample="true" enableUpdateByExample="false"
+			enableDeleteByExample="false" selectByExampleQueryId="false"></table>
+			
+			
+		<table tableName="t_store_image" domainObjectName="StoreImage"
+			enableCountByExample="true" enableUpdateByExample="false"
+			enableDeleteByExample="false" selectByExampleQueryId="false"></table>
+			
+		<table tableName="sec_adviertisement" domainObjectName="SecAdviertisement"
+			enableCountByExample="true" enableUpdateByExample="false"
+			enableDeleteByExample="false" selectByExampleQueryId="false"></table>
+			
+		<table tableName="t_store_communication_log" domainObjectName="StoreCommunicationLog"
+			enableCountByExample="true" enableUpdateByExample="false"
+			enableDeleteByExample="false" selectByExampleQueryId="false"></table>
+			
+		<table tableName="t_store_future_release" domainObjectName="StoreFutureRelease"
+			enableCountByExample="true" enableUpdateByExample="false"
+			enableDeleteByExample="false" selectByExampleQueryId="false"></table>
+		
+		<table tableName="t_cp_log" domainObjectName="CpLog"
+			enableCountByExample="true" enableUpdateByExample="false"
+			enableDeleteByExample="false" selectByExampleQueryId="false"></table>
+			
+		<table tableName="t_store_tag_image" domainObjectName="StoreTagImage"
+			enableCountByExample="true" enableUpdateByExample="false"
+			enableDeleteByExample="false" selectByExampleQueryId="false"></table>
+			
+		<table tableName="t_supplier" domainObjectName="Supplier"
+			enableCountByExample="true" enableUpdateByExample="false"
+			enableDeleteByExample="false" selectByExampleQueryId="false"></table>
+			
+		<table tableName="t_supplier_image" domainObjectName="SupplierImage"
+			enableCountByExample="true" enableUpdateByExample="false"
+			enableDeleteByExample="false" selectByExampleQueryId="false"></table>
+			
+		<table tableName="t_personal_supplier" domainObjectName="PersonalSupplier"
+			enableCountByExample="true" enableUpdateByExample="false"
+			enableDeleteByExample="false" selectByExampleQueryId="false"></table>
+			
+		<table tableName="t_store_image" domainObjectName="StoreImage"
+			enableCountByExample="true" enableUpdateByExample="false"
+			enableDeleteByExample="false" selectByExampleQueryId="false"></table>
+			
+		<table tableName="t_cp_log" domainObjectName="CpLog"
+			enableCountByExample="true" enableUpdateByExample="false"
+			enableDeleteByExample="false" selectByExampleQueryId="false"></table>
+			
+		<table tableName="t_cp_his" domainObjectName="CpHis"
+			enableCountByExample="true" enableUpdateByExample="false"
+			enableDeleteByExample="false" selectByExampleQueryId="false"></table>
+		
+		<table tableName="rpt_resource_count" domainObjectName="RptResourceCount"
+			enableCountByExample="true" enableUpdateByExample="false"
+			enableDeleteByExample="false" selectByExampleQueryId="false"></table>
+		
+		<table tableName="t_store_his" domainObjectName="StoreHis"
+			enableCountByExample="true" enableUpdateByExample="false"
+			enableDeleteByExample="false" selectByExampleQueryId="false"></table> -->
+		<!-- 
+		<table tableName="t_store" domainObjectName="Store"
+			enableCountByExample="true" enableUpdateByExample="false"
+			enableDeleteByExample="false" selectByExampleQueryId="false"></table>
+
+		<table tableName="t_store_tag" domainObjectName="StoreTag"
+			enableCountByExample="true" enableUpdateByExample="false"
+			enableDeleteByExample="false" selectByExampleQueryId="false"></table>
+		<table tableName="t_tag" domainObjectName="Tag"
+			enableCountByExample="true" enableUpdateByExample="false"
+			enableDeleteByExample="false" selectByExampleQueryId="false"></table>
+
+		<table tableName="t_tag_type" domainObjectName="TagType"
+			enableCountByExample="true" enableUpdateByExample="false"
+			enableDeleteByExample="false" selectByExampleQueryId="false"></table>
+
+		<table tableName="sec_sms_task" domainObjectName="SecSmsTask"
+			enableCountByExample="true" enableUpdateByExample="false"
+			enableDeleteByExample="false" selectByExampleQueryId="false"></table>
+			
+		<table tableName="sec_sms_task_log" domainObjectName="SecSmsTaskLog"
+			enableCountByExample="true" enableUpdateByExample="false"
+			enableDeleteByExample="false" selectByExampleQueryId="false"></table>
+		
+		<table tableName="t_store_business_opportunity" domainObjectName="StoreBusinessOpportunity"
+			enableCountByExample="true" enableUpdateByExample="false"
+			enableDeleteByExample="false" selectByExampleQueryId="false"></table>
+
+		<table tableName="t_store_business_opportunity_attr" domainObjectName="StoreBusinessOpportunityAttr"
+			enableCountByExample="true" enableUpdateByExample="false"
+			enableDeleteByExample="false" selectByExampleQueryId="false"></table>
+
+		<table tableName="t_store_business_opportunity_industry" domainObjectName="StoreBusinessOpportunityIndustry"
+			enableCountByExample="true" enableUpdateByExample="false"
+			enableDeleteByExample="false" selectByExampleQueryId="false"></table>
+			
+		<table tableName="t_store_business_opportunity_remark" domainObjectName="StoreBusinessOpportunityRemark"
+			enableCountByExample="true" enableUpdateByExample="false"
+			enableDeleteByExample="false" selectByExampleQueryId="false"></table>
+			
+		<table tableName="sec_job_log" domainObjectName="SecJobLog"
+			enableCountByExample="true" enableUpdateByExample="false"
+			enableDeleteByExample="false" selectByExampleQueryId="false"></table>
+
+		<table tableName="t_user_log" domainObjectName="UserLog"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" selectByExampleQueryId="false"></table>
+
+		<table tableName="t_user_role" domainObjectName="UserRole"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" selectByExampleQueryId="false"></table>
+			
+		<table tableName="t_role" domainObjectName="Role"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" selectByExampleQueryId="false"></table>
+			
+		<table tableName="t_msg_template" domainObjectName="MsgTemplate"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" selectByExampleQueryId="false"></table>
+			
+		<table tableName="sec_user" domainObjectName="SecUser"
+		enableCountByExample="false" enableUpdateByExample="false"
+		enableDeleteByExample="false" selectByExampleQueryId="false"></table>
+			
+		<table tableName="sec_announcement" domainObjectName="SecAnnouncement"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" selectByExampleQueryId="false"></table>
+			
+		<table tableName="sec_announcement_log" domainObjectName="SecAnnouncementLog"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" selectByExampleQueryId="false"></table>
+			
+		<table tableName="t_store_attr_image" domainObjectName="StoreAttrImage"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" selectByExampleQueryId="false"></table>
+			
+		<table tableName="t_store_charge_template_image" domainObjectName="StoreChargeTemplateImage"
+			enableCountByExample="true" enableUpdateByExample="false"
+			enableDeleteByExample="false" selectByExampleQueryId="false"></table>
+			
+		<table tableName="t_store_industry" domainObjectName="StoreIndustry"
+			enableCountByExample="true" enableUpdateByExample="false"
+			enableDeleteByExample="false" selectByExampleQueryId="false"></table>
+			
+		<table tableName="t_store_industry_image" domainObjectName="StoreIndustryImage"
+			enableCountByExample="true" enableUpdateByExample="false"
+			enableDeleteByExample="false" selectByExampleQueryId="false"></table>
+			
+		<table tableName="t_store_express_image" domainObjectName="StoreExpressImage"
+		enableCountByExample="true" enableUpdateByExample="false"
+		enableDeleteByExample="false" selectByExampleQueryId="false"></table>
+		
+		<table tableName="t_store_express_distribution_area_image" domainObjectName="StoreExpressDistributionAreaImage"
+		enableCountByExample="true" enableUpdateByExample="false"
+		enableDeleteByExample="false" selectByExampleQueryId="false"></table>
+			
+		<table tableName="t_store_industry_ladder_price_image" domainObjectName="StoreIndustryLadderPriceImage"
+			enableCountByExample="true" enableUpdateByExample="false"
+			enableDeleteByExample="false" selectByExampleQueryId="false"></table>
+		
+		<table tableName="t_store_industry_ladder_price" domainObjectName="StoreIndustryLadderPrice"
+			enableCountByExample="true" enableUpdateByExample="false"
+			enableDeleteByExample="false" selectByExampleQueryId="false"></table>
+		
+		<table tableName="t_store_express" domainObjectName="StoreExpress"
+			enableCountByExample="true" enableUpdateByExample="false"
+			enableDeleteByExample="false" selectByExampleQueryId="false"></table>
+			
+		<table tableName="t_store_express_distribution_area" domainObjectName="StoreExpressDistributionArea"
+			enableCountByExample="true" enableUpdateByExample="false"
+			enableDeleteByExample="false" selectByExampleQueryId="false"></table>
+		
+		<table tableName="t_store_service_project_charge_template_image" domainObjectName="StoreServiceProjectChargeTemplateImage"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" selectByExampleQueryId="false"></table>
+		
+		<table tableName="sec_role" domainObjectName="SecRole"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" selectByExampleQueryId="false"></table>
+		<table tableName="sec_resource" domainObjectName="SecResource"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" selectByExampleQueryId="false"></table>
+			
+		<table tableName="sec_user" domainObjectName="SecUser"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" selectByExampleQueryId="false"></table>
+		
+		<table tableName="t_device" domainObjectName="Device"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" selectByExampleQueryId="false"></table>
+		
+		<table tableName="sec_push_message" domainObjectName="SecPushMessage"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" selectByExampleQueryId="false"></table>
+		
+		<table tableName="t_industry" domainObjectName="Industry"
+			enableCountByExample="true" enableUpdateByExample="false"
+			enableDeleteByExample="false" selectByExampleQueryId="false"></table>
+		
+		<table tableName="t_industry_ladder_price_template" domainObjectName="IndustryLadderPriceTemplate"
+			enableCountByExample="true" enableUpdateByExample="false"
+			enableDeleteByExample="false" selectByExampleQueryId="false"></table>
+		 
+		<table tableName="t_express" domainObjectName="Express"
+			enableCountByExample="true" enableUpdateByExample="false"
+			enableDeleteByExample="false" selectByExampleQueryId="false"></table>
+		
+		<table tableName="t_express_distribution_area_template" domainObjectName="ExpressDistributionAreaTemplate"
+			enableCountByExample="true" enableUpdateByExample="false"
+			enableDeleteByExample="false" selectByExampleQueryId="false"></table>
+			
+		<table tableName="sec_feedback_log" domainObjectName="SecFeedbackLog"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" selectByExampleQueryId="false"></table>
+			
+		<table tableName="sec_user_role" domainObjectName="SecUserRole"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" selectByExampleQueryId="false"></table>
+			
+		<table tableName="sec_role_resource" domainObjectName="SecRoleResource"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" selectByExampleQueryId="false"></table>
+		 
+		 
+		<table tableName="t_store_service_type_project" domainObjectName="StoreServiceTypeProject"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" selectByExampleQueryId="false"></table>
+			
+		<table tableName="t_store_service_type" domainObjectName="StoreServiceType"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" selectByExampleQueryId="false"></table>
+			
+		<table tableName="t_store_service_project_charge_template" domainObjectName="StoreServiceProjectChargeTemplate"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" selectByExampleQueryId="false"></table>
+			
+		<table tableName="t_store_service_project" domainObjectName="StoreServiceProject"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" selectByExampleQueryId="false"></table>
+			
+		<table tableName="t_store_order_item" domainObjectName="StoreOrderItem"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" selectByExampleQueryId="false"></table>
+		
+		<table tableName="t_store_order_day_report" domainObjectName="StoreOrderDayReport"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" selectByExampleQueryId="false"></table>
+			
+		<table tableName="t_store_order_hour_report" domainObjectName="StoreOrderHourReport"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" selectByExampleQueryId="false"></table>
+		
+		<table tableName="t_store_express" domainObjectName="StoreExpress"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" selectByExampleQueryId="false"></table>
+			
+		<table tableName="t_store_express_distribution_area" domainObjectName="StoreExpressDistributionArea"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" selectByExampleQueryId="false"></table>
+			
+		<table tableName="t_store_express_image" domainObjectName="StoreExpressImage"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" selectByExampleQueryId="false"></table>
+			
+		<table tableName="t_store_express_distribution_area_image" domainObjectName="StoreExpressDistributionAreaImage"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" selectByExampleQueryId="false"></table>
+			
+		<table tableName="t_store_order_express" domainObjectName="StoreOrderExpress"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" selectByExampleQueryId="false"></table>
+			
+		<table tableName="t_store_order_express_distribution_area" domainObjectName="StoreOrderExpressDistributionArea"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" selectByExampleQueryId="false"></table>
+		
+		<table tableName="t_point_of_info" domainObjectName="PointOfInfo"
+			enableCountByExample="true" enableUpdateByExample="false"
+			enableDeleteByExample="false" selectByExampleQueryId="false"></table>
+			
+		<table tableName="t_address_static_data" domainObjectName="AddressStaticData"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" selectByExampleQueryId="false"></table>
+		
+		<table tableName="t_store_consignation" domainObjectName="StoreConsignation"
+			enableCountByExample="true" enableUpdateByExample="false"
+			enableDeleteByExample="false" selectByExampleQueryId="false"></table>
+		<table tableName="t_personal_supplier" domainObjectName="PersonalSupplier"
+			enableCountByExample="true" enableUpdateByExample="false"
+			enableDeleteByExample="false" selectByExampleQueryId="false"></table>
+			
+		<table tableName="t_supplier" domainObjectName="Supplier"
+			enableCountByExample="true" enableUpdateByExample="false"
+			enableDeleteByExample="false" selectByExampleQueryId="false"></table>
+			
+		<table tableName="t_personal_supplier_image" domainObjectName="PersonalSupplierImage"
+			enableCountByExample="true" enableUpdateByExample="false"
+			enableDeleteByExample="false" selectByExampleQueryId="false"></table>
+			
+		<table tableName="t_supplier_image" domainObjectName="SupplierImage"
+			enableCountByExample="true" enableUpdateByExample="false"
+			enableDeleteByExample="false" selectByExampleQueryId="false"></table>
+		-->
+			
+		<!-- 
+		<table tableName="t_store_follow" domainObjectName="StoreFollow"
+			enableCountByExample="true" enableUpdateByExample="false"
+			enableDeleteByExample="false" selectByExampleQueryId="false"></table>
+			
+		<table tableName="t_store_image" domainObjectName="StoreImage"
+			enableCountByExample="true" enableUpdateByExample="false"
+			enableDeleteByExample="false" selectByExampleQueryId="false"></table>
+		
+		<table tableName="t_personal_supplier" domainObjectName="PersonalSupplier"
+			enableCountByExample="true" enableUpdateByExample="false"
+			enableDeleteByExample="false" selectByExampleQueryId="false"></table>
+		
+		<table tableName="t_store" domainObjectName="Store"
+			enableCountByExample="true" enableUpdateByExample="false"
+			enableDeleteByExample="false" selectByExampleQueryId="false"></table>
+			
+		<table tableName="t_store_consignation_find" domainObjectName="StoreConsignationFind"
+			enableCountByExample="true" enableUpdateByExample="false"
+			enableDeleteByExample="false" selectByExampleQueryId="false"></table>
+		
+		<table tableName="t_financing_record" domainObjectName="FinancingRecord"
+			enableCountByExample="true" enableUpdateByExample="false"
+			enableDeleteByExample="false" selectByExampleQueryId="false"></table>
+			
+		<table tableName="t_wms_consulting_record" domainObjectName="WmsConsultingRecord"
+			enableCountByExample="true" enableUpdateByExample="false"
+			enableDeleteByExample="false" selectByExampleQueryId="false"></table>
+			
+		<table tableName="t_store_poi" domainObjectName="StorePoi"
+			enableCountByExample="true" enableUpdateByExample="false"
+			enableDeleteByExample="false" selectByExampleQueryId="false"></table>
+		
+		<table tableName="sec_operation_log" domainObjectName="SecOperationLog"
+			enableCountByExample="true" enableUpdateByExample="false"
+			enableDeleteByExample="false" selectByExampleQueryId="false"></table>
+		
+		<table tableName="t_store_log" domainObjectName="StoreLog"
+			enableCountByExample="true" enableUpdateByExample="false"
+			enableDeleteByExample="false" selectByExampleQueryId="false"></table>
+			
+		<table tableName="t_store_his" domainObjectName="StoreHis"
+			enableCountByExample="true" enableUpdateByExample="false"
+			enableDeleteByExample="false" selectByExampleQueryId="false"></table>
+		
+		<table tableName="t_store_index" domainObjectName="StoreIndex"
+			enableCountByExample="true" enableUpdateByExample="false"
+			enableDeleteByExample="false" selectByExampleQueryId="false"></table>
+		-->
+			
+		<!--
+		<table tableName="t_store_order_express_distribution_area" domainObjectName="StoreOrderExpressDistributionArea"
+			enableCountByExample="true" enableUpdateByExample="false"
+			enableDeleteByExample="false" selectByExampleQueryId="false"></table>
+		<table tableName="t_store_need" domainObjectName="StoreNeed"
+			enableCountByExample="true" enableUpdateByExample="false"
+			enableDeleteByExample="false" selectByExampleQueryId="false"></table>		
+		
+		<table tableName="t_store_need" domainObjectName="StoreNeed"
+			enableCountByExample="true" enableUpdateByExample="false"
+			enableDeleteByExample="false" selectByExampleQueryId="false"></table>		
+
+		<table tableName="t_store_need" domainObjectName="StoreNeed"
+			enableCountByExample="true" enableUpdateByExample="false"
+			enableDeleteByExample="false" selectByExampleQueryId="false"></table>
+
+		<table tableName="t_store_need_position" domainObjectName="StoreNeedPosition"
+			enableCountByExample="true" enableUpdateByExample="false"
+			enableDeleteByExample="false" selectByExampleQueryId="false"></table>
+
+		<table tableName="t_store_charge_template" domainObjectName="StoreChargeTemplate"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" selectByExampleQueryId="false"></table>
+		
+		<table tableName="t_store_charge_project_service_project" domainObjectName="StoreChargeProjectServiceProject"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" selectByExampleQueryId="false"></table>
+		
+		<table tableName="t_store_charge_project" domainObjectName="StoreChargeProject"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" selectByExampleQueryId="false"></table>
+			
+		<table tableName="t_store_attr" domainObjectName="StoreAttr"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" selectByExampleQueryId="false"></table>
+		
+		<table tableName="t_store" domainObjectName="Store"
+			enableCountByExample="true" enableUpdateByExample="false"
+			enableDeleteByExample="false" selectByExampleQueryId="false"></table>
+
+		<table tableName="t_store_his" domainObjectName="StoreHis"
+			enableCountByExample="true" enableUpdateByExample="false"
+			enableDeleteByExample="false" selectByExampleQueryId="false"></table>
+
+		<table tableName="t_static_data" domainObjectName="StaticData"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" selectByExampleQueryId="false"></table>
+			
+		<table tableName="t_role_resource" domainObjectName="RoleResource"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" selectByExampleQueryId="false"></table>
+			
+		<table tableName="t_resource" domainObjectName="Resource"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" selectByExampleQueryId="false"></table>-->
+		<!-- <table tableName="sec_sms_task" domainObjectName="SmsTask"
+			enableCountByExample="true" enableUpdateByExample="false"
+			enableDeleteByExample="false" selectByExampleQueryId="false"></table>
+		<table tableName="sec_sms_task_log" domainObjectName="SmsTaskLog"
+			enableCountByExample="true" enableUpdateByExample="false"
+			enableDeleteByExample="false" selectByExampleQueryId="false"></table> -->
+		<!--	
+		<table tableName="t_store_spider" domainObjectName="StoreSpider"
+			enableCountByExample="true" enableUpdateByExample="false"
+			enableDeleteByExample="false" selectByExampleQueryId="false"></table>
+		
+		<table tableName="rpt_resource_daily_count" domainObjectName="RptResourceDailyCount"
+			enableCountByExample="true" enableUpdateByExample="false"
+			enableDeleteByExample="false" selectByExampleQueryId="false"></table>
+			
+		<table tableName="rpt_resource_count" domainObjectName="RptResourceCount"
+			enableCountByExample="true" enableUpdateByExample="false"
+			enableDeleteByExample="false" selectByExampleQueryId="false"></table>
+		-->	
+			
+		<!-- 	
+		<table tableName="t_company_requirement_user" domainObjectName="CompanyRequirementUser"
+			enableCountByExample="true" enableUpdateByExample="false"
+			enableDeleteByExample="false" selectByExampleQueryId="false"></table>
+		
+		
+		<table tableName="t_payorder" domainObjectName="Payorder"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" selectByExampleQueryId="false"></table>
+			
+		<table tableName="t_message" domainObjectName="Message"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" selectByExampleQueryId="false"></table>
+			
+		<table tableName="t_bill_item" domainObjectName="BillItem"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" selectByExampleQueryId="false"></table>
+			
+		<table tableName="t_bill" domainObjectName="Bill"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" selectByExampleQueryId="false"></table>
+			
+		<table tableName="t_banner_item" domainObjectName="BannerItem"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" selectByExampleQueryId="false"></table>
+			
+		<table tableName="t_address_static_data" domainObjectName="AddressStaticData"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" selectByExampleQueryId="false"></table>
+ 
+ 
+ 		<table tableName="t_sequence" domainObjectName="Sequence"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" selectByExampleQueryId="false"></table>
+			-->
+	</context>
+</generatorConfiguration>
